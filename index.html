@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+    <head>
+        <title>Asking her out</title>
+        <link rel="stylesheet" href="./styles.css">
+        
+    </head> 
+    <body>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+          </style>
+        <div class="container">
+            <div >
+                
+                <h1 class = "header_text">
+                    <div>Hey , Gauri !</div>
+                         Do you wanna go out with me?</h1>
+
+            </div>
+            <div class="gif_container">
+                <img src="assets/Erm Mochi Sticker - Erm Mochi Peach - Discover & Share GIFs.gif">
+                
+            </div>
+            <div class = "buttons">
+                <button class="btn" id = "yesButton" onclick="nextPage()">Yes</button>
+                <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
+                <script>
+                    function nextPage() {
+                        window.location.href = "yes.html";
+                    }
+                    
+                    function moveButton() {
+                        var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 85;
+                        var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
+                        document.getElementById('noButton').style.left = `${x}px`;
+                        document.getElementById('noButton').style.top = `${y}px`;
+                    }
+                </script> 
+            </div>
+        </div>
+       
+    </body> 
+</html>
